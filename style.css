@@ -1,0 +1,519 @@
+*{
+	padding: 0; margin: 0; box-sizing: border-box;
+	text-decoration: none; list-style: none;
+	font-family: sans-serif;
+	transition: .5s;
+}
+::selection{
+	color: white;
+	background: #ad630b;
+}
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 9.2rem;
+	font-size: 62.5%;
+}
+.container{
+	width: 100%;
+	min-height: calc(100vh - 9.2rem);
+	background: black;
+	color: white;
+	margin: auto;
+	padding: 1rem 9rem;
+
+}
+nav{
+	width: 100%;
+	height: 9.2rem;
+	background: black;
+	color: white;
+	padding: 1rem 9rem;
+	position: fixed;
+	top: 0;
+	display: flex;
+	z-index: 2;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 0.1rem solid dimgray;
+}
+nav ul{
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+nav ul li a{
+	color: white;
+	font-size: 1.7rem;
+}
+nav ul li a:hover,nav .icon i:hover{
+	color: #ad630b;
+	cursor: pointer;
+}
+nav img{
+	width: 8rem;
+}
+nav > .icon{
+	position: relative;
+	z-index: 2;
+	word-spacing: 1rem;
+}
+nav .icon i{
+	font-size: 2.5rem;
+
+}
+nav .icon .fa-bars{
+	display: none;
+}
+nav .icon input{display: none;}
+nav .search{
+	transform: scale(0);
+	z-index: 2;
+	display: flex;
+	position: absolute;
+	right: 10rem;
+	top: 10rem;
+	padding: 1.5rem;
+	background: white;
+	width: 40rem;
+}
+nav .search input{
+	width: 100%;
+	font-size: 1.5rem;
+	border: none;
+	outline: none;
+}
+nav .search i{
+	color: black;
+	font-size: 2rem;
+}
+
+.shopping{
+	/*display: none;*/
+	padding: 2rem;
+	position: absolute;
+	top: 9.1rem;
+    right: -100%;
+	width: 35rem;
+	background: white;
+	height: calc(100vh - 9.2rem);
+}
+.shopping > a{
+	display: block;
+	color: white;
+	width: 100%;
+	font-size: 1.7rem;
+	padding: 1.0rem;
+	text-align: center;
+	background: black;
+}
+.shoppingitems{
+	/*width: 100%;*/
+	color: black;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2.0rem;
+}
+.shoppingitems img{
+	width: 8rem;
+}
+.shoppingitems .text{
+	flex-grow: 2;
+	margin-left: 2rem;
+}
+.shoppingitems .text p
+{
+	font-size: 1.6rem;
+}
+.shoppingitems h5{
+	font-size: 2rem;
+}
+.shoppingitems i{
+	text-align: right;
+	font-size: 1.7rem;
+}
+
+#home{
+	width: 100%;
+	min-height: calc(100vh - 9.2rem);
+	margin-top: 9.2rem;
+	background-image: linear-gradient(64deg, black, #0d0d0d00),url(images/home-img.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+
+}
+.cover{
+	padding-top: 4rem;
+	max-width: 60rem;
+
+}
+.cover h1{
+	font-size: 6rem;
+	margin: 1rem 0;
+}
+.cover p{
+	font-size: 2rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+}
+.boxlink,.contactcover form input[type=submit]{
+	display: inline-block;
+	font-size: 1.7rem;
+	color: white;
+	background: #ad630b;
+	padding: 1rem 3rem;
+    font-weight: bold;
+    border: 0.2rem solid transparent;
+}
+.boxlink:hover,.contactcover form input[type=submit]:hover{
+	color: #ad630b;
+    border: .2rem solid #ad630b;
+    background: none;
+}
+.container h1 > span{
+	color: #ad630b;
+}
+.container > h1{
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	font-size: 3.7rem;
+}
+.aboutCover{
+	margin-top: 3rem;
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background: #13131a;
+	align-items: center;
+}
+.aboutCover img{
+	display: block;
+	width: 100%;
+	height: 90%;
+}
+.aboutCover .img{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 40rem;
+}
+.aboutCover .content{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 40rem;
+	padding: 2em;
+}
+.aboutCover .content h2{
+	font-size: 3rem;
+}
+.aboutCover .content p{
+	line-height: 2;
+	margin: 1.5rem 0;
+	font-size: 1.7rem;
+}
+.menucover{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+}
+.menucover .menubox{
+	border: 0.1rem solid lightgray;
+	text-align: center;
+	padding: 5rem;
+}
+.menucover .menubox:hover{
+	color: black;
+	background: white;
+}
+.menucover .menubox img{
+		width: 10rem;
+		display: block;
+		margin: 1rem auto;
+}
+.menucover .menubox h3,.menucover .menubox h2{
+	font-size: 2.5rem;
+}
+.menucover .menubox h2 span,.productCover .productbox h2 span {
+	font-size: 1.7rem;
+	font-weight: lighter;
+	text-decoration: line-through;
+}
+{
+
+}
+
+.menucover .menubox h3,.menucover .menubox h2,.menucover .menubox a{
+	margin: 1.5rem 0;
+}
+.productCover{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.productCover .productbox{
+	flex-grow: 1;
+	flex-basis: 30rem;
+	text-align: center;
+	border: .1rem solid gray;
+	padding: 2rem;
+	margin: 3rem 0;
+}
+.productCover .icon i{
+	border: .1rem solid gray;
+	padding: 1.5rem;
+	font-size: 2rem;
+	margin: 0 0.2rem;
+}
+.productCover .productbox img{
+	width: 18rem;
+	margin: 2.5rem 0;
+}
+.productCover .productbox h1{
+	font-size: 2.5rem;
+}
+.productCover .productbox .star{
+	color: yellow;
+	margin: 1rem;
+}
+.productCover .productbox h2{
+	font-size: 2.5rem;
+	font-weight: lighter;
+}
+
+.reviewcover{
+	margin-top: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.reviewbox{
+	flex-grow: 1;
+	flex-basis: 35rem;
+	flex-shrink: 1;
+	border: .1rem solid gray;
+	text-align: center;
+	padding: 3.5rem;
+}
+.reviewbox img{
+	width: 6rem;
+}
+.reviewbox p{
+	font-size: 1.7rem;
+	margin: 2.5rem 0;
+	line-height: 1.5;
+}
+.reviewbox img:last-of-type{
+	border-radius: 50%;
+	width: 7rem;
+}
+.reviewbox h3{
+	margin: 1rem 0;
+	font-size: 1.8rem;
+}
+.reviewbox .star i{
+	font-size: 1.8rem;
+	color: yellow;
+}
+.contactcover{
+	background: #13131a;
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.contactcover iframe{
+	width: 100%;
+	flex-grow: 1;
+	flex-basis: 40rem;
+}
+.contactcover form{
+	flex-grow: 1;
+	flex-basis: 40rem;
+	padding: 3.5rem;
+	/*background: red;*/
+	text-align: center;
+}
+.contactcover form h1{
+	margin-bottom: 2rem;
+	font-size: 3.5rem;
+}
+.contactcover form .row{
+	display: flex;
+	margin-bottom: 2rem;
+	border: .1rem solid gray;
+	align-items: center;
+	background: black;
+}
+.contactcover form .row i{
+	padding: 0 2rem;
+	font-size: 2rem;
+}
+.contactcover form input:not(input[type=submit]){
+	width: 100%;
+	background: black;
+	padding: 2rem;
+	font-size: 1.7rem;
+	color: white;
+	border: none;
+	outline: none;
+}
+.contactcover form input[type=submit]{
+	font-size: 1.7rem;
+}
+.blog{
+	margin-top: 3rem;
+	font-weight: lighter;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+	gap: 1.5rem;
+}
+.blogbox{
+	border: .1rem solid gray;
+}
+.blogbox .blogimage{
+	width: 100%;
+	height: 22rem;
+	overflow: hidden;
+}
+.blogbox img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.blogbox:hover img{
+	transform: scale(1.2);
+}
+.blogcontainer{
+	padding: 2rem;
+}
+.blogbox h2,.blogbox h3,.blog p{
+	margin: 1rem 0;
+	font-weight: lighter;
+}
+.blogbox h2{font-size: 2.5rem;}
+.blog p{font-size: 1.7rem;}
+.blogbox h3{
+	color: #ad630b;
+	font-size: 2rem;
+}
+footer{
+	background: #13131a;
+	padding: 3rem;
+}
+footer .social{
+	color: white;
+	font-size: 1.7rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+.social i{
+	background: #000614;
+	display: block;
+	width: 5.5rem;
+	/*height: 50px;*/
+	line-height: 1rem;
+	text-align: center;
+	vertical-align: middle;
+	border: .1rem solid gray;
+	border-radius: 50%;
+	padding: 2rem;
+	cursor: pointer;
+}
+footer .menu ul{
+	margin: 2rem 0;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+footer .menu ul li a{
+	display: block;
+	padding: 1rem 3rem;
+	color: white;
+	font-size: 1.7rem;
+	border: .1rem solid white;
+}
+footer .menu ul li a:hover
+{
+	background: white;
+	color: black;
+}
+footer h3{
+	font-weight: lighter;
+	color: white;
+	text-align: center;
+	font-size: 1.9rem;
+}
+footer h3 span{
+	color: red;
+}
+@media screen and (max-width: 922px){
+	nav{
+		padding: 1rem 2rem;
+	}
+	nav .search{
+	right: 2%;
+}
+	.container{
+	padding: 1rem 2rem;
+}
+
+#home{
+		display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+html{
+	font-size: 52%;
+}
+}
+@media (max-width: 800px){
+	html{
+		font-size: 50%;
+	}
+	nav .menu{
+		/*display: none;*/
+		order: 3;
+		width: 50%;
+		height: 100vh;
+		position: absolute;
+		background: white;
+		padding: 3rem;
+		top: 9.3rem;
+		right: -100%;
+	}
+	nav ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+nav ul li a{
+	color: black;
+	display: block;
+	font-size: 2.5rem;
+	transform: scale(1);
+}
+nav ul li a:hover{
+	transform: scale(1.5);
+}
+		nav .search{
+		width: 90%;	
+}
+nav .search input{
+	width: 100%;
+}
+	nav .icon .fa-bars{
+	display: inline-block;
+}
+.shopping{
+	width: 27rem;
+}
+}
